@@ -1,17 +1,18 @@
-# README
+# WELCOME TO DEVGRAM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is a dupe instagram rebuilt for learning and practice purposes, ( for now :) ).
 
 Things you may want to cover:
 
-* Ruby version
+* Version control
+
+* AWS s3 & photo uploading
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database creation via postgresql
 
 * Database initialization
 
