@@ -52,3 +52,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use postgresql as the database for Active Record and production
 gem 'pg', '~> 0.18.4'
+
+
+# Gems for image managment
+gem 'carrierwave'
+gem 'carrierwave-aws'
+gem 'aws-sdk', '~> 2'
+gem 'mini_magick'
+gem 'fog'
+gem 'figaro'
+gem 'unf'
+gem 'fog-aws'
