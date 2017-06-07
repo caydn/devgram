@@ -63,3 +63,10 @@ gem 'fog'
 gem 'figaro'
 gem 'unf'
 gem 'fog-aws'
+
+# Change form style
+gem 'simple_form'
+
+# Gems for site styling
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-sass', '~> 4.7.0'
