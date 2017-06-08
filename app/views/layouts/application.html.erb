@@ -14,26 +14,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="navbar-container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="glyphicon glyphicon-option-vertical"></span>
-          </button>
-          <%= link_to (root_path), :class => 'name navbar-brand' do %>
-            <span>DevGram</span>
-          <% end %>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse pull-right">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "New Post", new_post_path %></li>
-            <li><%= link_to "Login", '#' %></li>
-            <li><%= link_to "Register", '#' %></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    <%= render 'layouts/navbar'%>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

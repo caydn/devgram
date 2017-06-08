@@ -70,3 +70,8 @@ gem 'simple_form'
 # Gems for site styling
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 4.7.0'
+
+# Use devise for Log-in ability/ create account
+gem 'devise'
+# For Errors in devise
+gem 'bcrypt'
