@@ -1,27 +1,31 @@
-<%= simple_form_for(@post) do |f| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="text-center">
+  <%= image_tag @post.image.profile_size.url %>
+</div>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<div class="form-wrapper">
+  <%= simple_form_for @post, html: { class: 'form-horizontal', multipart: true} do |f| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+        <div class="form-group field">
+          <%= f.input :image %>
+        </div>
+
+        <div class="form-group text-center field">
+          <%= f.input :caption %>
+        </div>
+
+        <div class="form-group text-center field">
+          <%= f.button :submit, class: 'btn-success' %>
+        </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= f.label :caption %>
-    <%= f.text_field :caption %>
-  </div>
-
-  <div class="actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

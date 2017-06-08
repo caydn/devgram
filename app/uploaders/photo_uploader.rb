@@ -50,7 +50,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   # original size is [700,700]
   version :full_size do
-    process resize_to_fill: [950, 950]
+    process resize_to_fill: [640, 640]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
