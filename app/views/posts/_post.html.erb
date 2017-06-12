@@ -22,6 +22,9 @@
             <%= render post.comments, post: post %>
           <% end %>
         </div>
+        <div class="time-ago">
+          <%= time_ago_in_words post.created_at %>
+        </div>
       </div>
     </div>
     <div class="comment-like-form row">
@@ -29,7 +32,7 @@
         <span class="glyphicon glyphicon-heart-empty"></span></span>
       </div>
       <div class="comment-form col-sm-11">
-        <%= form_for [post, post.comments.build, remote: true] do |f| %>
+        <%= form_for [post, post.comments.build], remote: true do |f| %>
           <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
         <% end %>
       </div>
