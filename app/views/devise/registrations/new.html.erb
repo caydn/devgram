@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<!-- <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -13,6 +13,31 @@
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>
-<% end %>
+<% end %> -->
 
-<%= render "devise/shared/links" %>
+<!-- <div class="registration-bg"> </div>-->
+  <div class="container">
+    <div class="row registration-bg">
+      <!-- <div class="col-md-6 blue"><p>this is where the filler comes in handy bc buierhguriepg uerigp huepg huep huet pghutie pghuti eghuti pghutip guit phgutp ghuti pghutip ghtup ghutpg hug huipg huepg huei heuip ghuig huipg huipg huipg hutighuigp huigp huigphuig pheugipe hguipe hguie pgheuigh eui pghuig phgeuigp hugiphgebghui pghuipg hugip erhgui hgui gheui ghuiof fbifhspf sip heuis ghui hsui gsuis guiog uir ghui geuig gheruig ueig ehgio guiog hguirg hurio ghuig ohreui ghuei ghruig hrueig heuig hueigo huig ohgeuiohvuohroho84yr u4g74t rg7 t4rh4 up 8ohfuir ohguio bi ovghuo ui huei hguio hugio gui ufi ofhufi ofui fhuifo huio hguio guio huio guio huiwo guio guri guro guio guiog hiog.</p></div> -->
+      <div class="col-md-4 col-md-offset-7">
+        <div class="log-in panel">
+          <div class="panel-heading">
+            <h2>Create Your Account</h2>
+          </div>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+            <div class="panel-body">
+              <%= f.input :email, required: true, autofocus: true, label: false, placeholder: 'Email', input_html: { class: 'input-lg'} %>
+              <%= f.input :user_name, required: true, autofocus: true, label: false, placeholder: 'User Name', input_html: { class: 'input-lg'} %>
+              <%= f.input :password, required: true,hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), autofocus: true, label: false, placeholder: 'Password', input_html: { class: 'input-lg'} %>
+              <%= f.input :password_confirmation, required: true, autofocus: true, label: false, placeholder: 'Confirm Password', input_html: { class: 'input-lg'} %>
+              <%= f.button :submit, "Sign up", class: 'btn-lg btn-info btn-block' %>
+            </div>
+          <% end %>
+          <%= render "devise/shared/links" %>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

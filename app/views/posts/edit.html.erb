@@ -2,7 +2,7 @@
 <div id="starter" class="container">
   <h1 class="text-center">Editing Post</h1>
 
-  <%= render 'form', post: @post %>
+  <%= render 'form' %>
 
   <div class="text-center edit-links">
     <%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %> |
